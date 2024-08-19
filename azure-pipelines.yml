@@ -15,3 +15,7 @@ steps:
   inputs:
     SonarQube: 'sonarqube_conn'
     scannerMode: 'Other'
+    
+- task: SonarQubeAnalyze@6
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
