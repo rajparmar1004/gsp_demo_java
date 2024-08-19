@@ -11,14 +11,7 @@ pool:
 
 steps:
 
-
-- task: Maven@4
+- task: SonarQubePrepare@6
   inputs:
-    mavenPomFile: 'pom.xml'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: true
+    SonarQube: 'sonarqube_conn'
+    scannerMode: 'Other'
